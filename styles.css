@@ -1847,3 +1847,124 @@ a {
         font-size: 10px;
     }
 }
+/* =========================================================
+   AUREUM — ABOUT SECTION
+   ========================================================= */
+
+.intro {
+    padding: 150px 6vw 165px;
+    background: #f8f6f0;
+}
+
+.intro .section-label {
+    margin-bottom: 72px;
+    color: #b87916;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    column-gap: 9vw;
+    align-items: start;
+}
+
+.intro-heading h2 {
+    max-width: 850px;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(62px, 6.7vw, 108px);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    color: #1d1c19;
+}
+
+.intro-heading h2 em {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    color: #b87916;
+}
+
+.intro .body-copy {
+    max-width: 590px;
+    padding-top: 7px;
+}
+
+.intro .body-copy p {
+    margin: 0 0 30px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #6d6961;
+}
+
+.intro .body-copy p:last-child {
+    margin-bottom: 0;
+    color: #35322d;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .intro {
+        padding: 110px 6vw 120px;
+    }
+
+    .intro .section-label {
+        margin-bottom: 50px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        row-gap: 55px;
+    }
+
+    .intro-heading h2 {
+        max-width: 800px;
+        font-size: clamp(58px, 9vw, 86px);
+    }
+
+    .intro .body-copy {
+        max-width: 700px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .intro {
+        padding: 90px 22px 100px;
+    }
+
+    .intro .section-label {
+        margin-bottom: 38px;
+        font-size: 10px;
+    }
+
+    .intro-grid {
+        row-gap: 42px;
+    }
+
+    .intro-heading h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        line-height: 0.94;
+    }
+
+    .intro .body-copy p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+}
