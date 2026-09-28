@@ -1,24 +1,165 @@
-const nav=document.getElementById('nav');
-const menu=document.querySelector('.menu');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));
-menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});
-document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+/* =========================================================
+   AUREUM INDUSTRIES
+   Corporate Website — Main JavaScript
+   ========================================================= */
 
-const scenes=[...document.querySelectorAll('.scene')].filter(s=>!s.classList.contains('scene-progress'));
-const bars=[...document.querySelectorAll('.scene-progress span')];
-const pause=document.querySelector('.pause');
-let current=0, timer, playing=true;
-function showScene(i){scenes.forEach((s,n)=>s.classList.toggle('active',n===i));bars.forEach((b,n)=>b.classList.toggle('active',n===i));current=i}
-function start(){clearInterval(timer);timer=setInterval(()=>showScene((current+1)%scenes.length),4800)}
-start();
-pause?.addEventListener('click',()=>{playing=!playing;if(playing){start();pause.textContent='Ⅱ'}else{clearInterval(timer);pause.textContent='▶'}});
+document.addEventListener("DOMContentLoaded", () => {
 
-const form=document.getElementById('enquiry');
-form?.addEventListener('submit',e=>{
-  e.preventDefault();
-  const data=new FormData(form);
-  const subject=encodeURIComponent('Project enquiry — Aureum Industries');
-  const body=encodeURIComponent(`Name: ${data.get('name')}\nCompany: ${data.get('company')||''}\nPhone / Email: ${data.get('contact')}\n\nHow can we help?\n${data.get('message')}`);
-  window.location.href=`mailto:prasadsuryawanshi@aureumind.com?subject=${subject}&body=${body}`;
+  /* ---------------------------------------------------------
+     MOBILE NAVIGATION
+     --------------------------------------------------------- */
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteNav = document.querySelector(".site-nav");
+
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("is-open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      document.body.classList.toggle("nav-open", isOpen);
+    });
+
+    // Close menu after clicking a navigation link
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+
+  /* ---------------------------------------------------------
+     SMOOTH SCROLLING
+     --------------------------------------------------------- */
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+      const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+
+  });
+
+
+  /* ---------------------------------------------------------
+     HEADER SCROLL EFFECT
+     --------------------------------------------------------- */
+
+  const header = document.querySelector(".site-header");
+
+  if (header) {
+
+    const updateHeader = () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("is-scrolled");
+      } else {
+        header.classList.remove("is-scrolled");
+      }
+
+    };
+
+    updateHeader();
+
+    window.addEventListener("scroll", updateHeader, {
+      passive: true
+    });
+  }
+
+
+  /* ---------------------------------------------------------
+     REVEAL ANIMATIONS
+     --------------------------------------------------------- */
+
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-up, .reveal-left, .reveal-right"
+  );
+
+  if ("IntersectionObserver" in window && revealElements.length) {
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+
+          observer.unobserve(entry.target);
+
+        });
+
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -50px 0px"
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+  } else {
+
+    revealElements.forEach((element) => {
+      element.classList.add("is-visible");
+    });
+
+  }
+
+
+  /* ---------------------------------------------------------
+     CURRENT YEAR
+     --------------------------------------------------------- */
+
+  const yearElement = document.querySelector("#year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+
+  /* ---------------------------------------------------------
+     ESC KEY — CLOSE MOBILE NAVIGATION
+     --------------------------------------------------------- */
+
+  document.addEventListener("keydown", (event) => {
+
+    if (event.key !== "Escape") return;
+
+    if (siteNav) {
+      siteNav.classList.remove("is-open");
+    }
+
+    document.body.classList.remove("nav-open");
+
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+  });
+
 });
-document.getElementById('year').textContent=new Date().getFullYear();
