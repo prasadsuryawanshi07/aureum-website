@@ -1668,3 +1668,146 @@ a {
         font-size: 13px;
     }
 }
+/* =========================================================
+   AUREUM — HERO REFINEMENT
+   ========================================================= */
+
+.hero {
+    min-height: calc(100vh - 84px);
+    padding: 118px 5.5vw 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero content */
+.hero-content {
+    max-width: 1050px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-eyebrow {
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    max-width: 980px;
+    margin: 0;
+    font-size: clamp(72px, 7.4vw, 132px);
+    line-height: 0.86;
+    letter-spacing: -0.055em;
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin-top: 42px;
+    font-size: 20px;
+    line-height: 1.55;
+    color: rgba(38, 35, 31, 0.68);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+/* Bottom capability strip */
+.hero-capabilities {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(38, 35, 31, 0.12);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-capabilities > * {
+    min-width: 0;
+}
+
+.hero-capabilities a,
+.hero-capabilities span {
+    display: block;
+    white-space: nowrap;
+}
+
+
+/* Desktop refinement */
+@media (min-width: 1200px) {
+    .hero {
+        padding-left: 5.5vw;
+        padding-right: 5.5vw;
+    }
+
+    .hero h1 {
+        max-width: 1000px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 90px 6vw 30px;
+        gap: 100px;
+    }
+
+    .hero h1 {
+        font-size: clamp(62px, 10vw, 96px);
+    }
+
+    .hero-description {
+        max-width: 620px;
+        font-size: 18px;
+    }
+
+    .hero-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero {
+        padding: 72px 22px 24px;
+        gap: 80px;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 15vw, 76px);
+        line-height: 0.9;
+        letter-spacing: -0.045em;
+    }
+
+    .hero-description {
+        margin-top: 30px;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-capabilities {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .hero-capabilities a,
+    .hero-capabilities span {
+        white-space: normal;
+    }
+}
