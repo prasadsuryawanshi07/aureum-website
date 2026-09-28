@@ -13,58 +13,49 @@
         content="Aureum Industries — strategic land, development and transaction advisory."
     >
 
-    <title>Aureum Industries</title>
+    <title>Aureum Industries | Land. Development. Opportunity.</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- =========================================================
+         SITE HEADER
+    ========================================================== -->
 
-    <header class="site-header" id="site-header">
+    <header class="site-header" id="top">
 
         <div class="header-inner">
 
-            <!-- LOGO -->
             <a href="#home" class="brand" aria-label="Aureum Industries home">
                 <img
                     src="image.png"
                     alt="Aureum Industries"
-                    class="brand-logo"
                 >
             </a>
 
-            <!-- DESKTOP NAVIGATION -->
-            <nav class="desktop-nav" aria-label="Primary navigation">
+            <nav class="desktop-nav" aria-label="Main navigation">
 
                 <a href="#about">About Aureum</a>
-
                 <a href="#capabilities">Capabilities</a>
-
                 <a href="#sectors">Sectors</a>
-
                 <a href="#approach">Our Approach</a>
-
                 <a href="#leadership">Leadership</a>
 
                 <a
                     href="#contact"
-                    class="nav-contact"
+                    class="nav-cta"
                 >
                     Discuss a Project
                 </a>
 
             </nav>
 
-            <!-- MOBILE MENU BUTTON -->
             <button
                 class="menu-toggle"
-                id="menu-toggle"
                 type="button"
-                aria-label="Open navigation"
+                aria-label="Open navigation menu"
                 aria-expanded="false"
             >
                 <span></span>
@@ -73,55 +64,62 @@
 
         </div>
 
-        <!-- MOBILE NAVIGATION -->
-        <nav
-            class="mobile-nav"
-            id="mobile-nav"
-            aria-label="Mobile navigation"
-        >
+        <div class="mobile-menu">
 
             <a href="#about">About Aureum</a>
-
             <a href="#capabilities">Capabilities</a>
-
             <a href="#sectors">Sectors</a>
-
             <a href="#approach">Our Approach</a>
-
             <a href="#leadership">Leadership</a>
-
             <a href="#contact">Discuss a Project</a>
 
-        </nav>
+        </div>
 
     </header>
 
 
     <main>
 
-        <!-- =========================================
+        <!-- =====================================================
              HERO
-        ========================================== -->
+        ====================================================== -->
 
         <section class="hero" id="home">
 
-            <div class="hero-grid"></div>
+            <div class="hero-background">
 
-            <div class="hero-glow"></div>
+                <!--
+                    HERO VIDEO
 
-            <div class="hero-content">
+                    We will upload hero.mp4 later.
+                    Until then the section remains visually clean.
 
-                <p class="eyebrow">
-                    STRATEGIC LAND
-                    <span>•</span>
-                    DEVELOPMENT
-                    <span>•</span>
-                    TRANSACTIONS
-                </p>
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="hero-video"
+                    >
+                        <source src="hero.mp4" type="video/mp4">
+                    </video>
+                -->
+
+                <div class="hero-glow"></div>
+                <div class="hero-grid"></div>
+
+            </div>
+
+            <div class="container hero-content">
+
+                <div class="eyebrow">
+                    Strategic Land <span>•</span>
+                    Development <span>•</span>
+                    Transactions
+                </div>
 
                 <h1>
                     We turn land
-                    <br>
                     <span>into opportunity.</span>
                 </h1>
 
@@ -136,14 +134,14 @@
 
                     <a
                         href="#capabilities"
-                        class="button button-primary"
+                        class="button button-dark"
                     >
                         Explore Our Capabilities
                     </a>
 
                     <a
                         href="#contact"
-                        class="button button-secondary"
+                        class="button button-light"
                     >
                         Discuss a Project
                     </a>
@@ -155,18 +153,19 @@
             <div class="hero-bottom">
 
                 <span>
-                    STRATEGIC LAND AGGREGATION
-                    <small>FROM IDENTIFICATION TO ACQUISITION</small>
+                    Land Aggregation
                 </span>
 
                 <span>
-                    TDR TRANSACTIONS
-                    <small>TRANSACTION &amp; DEVELOPMENT SUPPORT</small>
+                    TDR Transactions
                 </span>
 
                 <span>
-                    DEVELOPMENT FACILITATION
-                    <small>LAND TO OPPORTUNITY</small>
+                    Development Facilitation
+                </span>
+
+                <span>
+                    Strategic Advisory
                 </span>
 
             </div>
@@ -174,41 +173,59 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================================
              ABOUT
-        ========================================== -->
+        ====================================================== -->
 
-        <section class="section about" id="about">
+        <section class="section about-section" id="about">
 
-            <div class="section-label">
-                01 / ABOUT AUREUM
-            </div>
+            <div class="container">
 
-            <div class="section-content">
+                <div class="section-intro">
 
-                <h2>
-                    We work where
-                    <em>land</em>,
-                    capital and
-                    development meet.
-                </h2>
+                    <div class="eyebrow">
+                        About Aureum
+                    </div>
 
-                <div class="about-copy">
+                    <h2>
+                        We work where
+                        <span>land meets possibility.</span>
+                    </h2>
 
-                    <p>
-                        Aureum Industries is a strategic land and
-                        development enterprise focused on identifying,
-                        structuring and facilitating high-value
-                        opportunities.
-                    </p>
+                </div>
 
-                    <p>
-                        From land aggregation and acquisition to
-                        development facilitation and strategic
-                        transactions, we bring together the people,
-                        information and execution required to move
-                        complex opportunities forward.
-                    </p>
+                <div class="about-grid">
+
+                    <div class="about-lead">
+
+                        <p>
+                            Aureum Industries is a strategic land,
+                            development and transaction platform
+                            focused on unlocking complex
+                            opportunities across Maharashtra and
+                            beyond.
+                        </p>
+
+                    </div>
+
+                    <div class="about-copy">
+
+                        <p>
+                            From identifying land to facilitating
+                            acquisition, development and strategic
+                            transactions, we bring together
+                            commercial understanding, local
+                            intelligence and execution capability.
+                        </p>
+
+                        <p>
+                            Our role is simple:
+                            understand the opportunity,
+                            navigate the complexity and move the
+                            transaction forward.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -217,32 +234,36 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================================
              CAPABILITIES
-        ========================================== -->
+        ====================================================== -->
 
         <section
-            class="section capabilities"
+            class="section capabilities-section"
             id="capabilities"
         >
 
-            <div class="section-label">
-                02 / CAPABILITIES
-            </div>
-
-            <div class="section-content">
+            <div class="container">
 
                 <div class="section-heading-row">
 
-                    <h2>
-                        From
-                        <em>identification</em>
-                        to execution.
-                    </h2>
+                    <div>
+
+                        <div class="eyebrow">
+                            Capabilities
+                        </div>
+
+                        <h2>
+                            From identification
+                            <span>to execution.</span>
+                        </h2>
+
+                    </div>
 
                     <p>
-                        A connected approach to land, transactions
-                        and development.
+                        Aureum supports organisations through
+                        the critical stages of land and
+                        development transactions.
                     </p>
 
                 </div>
@@ -255,18 +276,18 @@
                         <span class="card-number">01</span>
 
                         <h3>
-                            Strategic Land
-                            Aggregation
+                            Strategic Land Aggregation
                         </h3>
 
                         <p>
-                            Identification, aggregation and
-                            acquisition of strategic land parcels
-                            for institutional and development-led
-                            requirements.
+                            Identification, sourcing,
+                            aggregation and acquisition of
+                            strategically located land parcels.
                         </p>
 
-                        <span class="card-arrow">↗</span>
+                        <span class="card-link">
+                            Explore capability →
+                        </span>
 
                     </article>
 
@@ -276,18 +297,18 @@
                         <span class="card-number">02</span>
 
                         <h3>
-                            TDR
-                            Transactions
+                            TDR Transactions
                         </h3>
 
                         <p>
-                            Structuring and facilitating TDR
-                            opportunities with a focus on
-                            commercial viability and transaction
-                            execution.
+                            Strategic sourcing, structuring and
+                            facilitation of Transferable
+                            Development Rights transactions.
                         </p>
 
-                        <span class="card-arrow">↗</span>
+                        <span class="card-link">
+                            Explore capability →
+                        </span>
 
                     </article>
 
@@ -297,17 +318,18 @@
                         <span class="card-number">03</span>
 
                         <h3>
-                            Development
-                            Facilitation
+                            Transaction & Development Support
                         </h3>
 
                         <p>
-                            Supporting organisations through the
-                            land, planning and transaction
-                            requirements that precede development.
+                            Commercial, legal and execution
+                            support across complex property
+                            and development transactions.
                         </p>
 
-                        <span class="card-arrow">↗</span>
+                        <span class="card-link">
+                            Explore capability →
+                        </span>
 
                     </article>
 
@@ -317,17 +339,18 @@
                         <span class="card-number">04</span>
 
                         <h3>
-                            Strategic
-                            Transactions
+                            Development Facilitation
                         </h3>
 
                         <p>
-                            Connecting landowners, developers,
-                            investors and institutions around
-                            high-value opportunities.
+                            Connecting land, development
+                            potential, stakeholders and
+                            execution pathways.
                         </p>
 
-                        <span class="card-arrow">↗</span>
+                        <span class="card-link">
+                            Explore capability →
+                        </span>
 
                     </article>
 
@@ -338,53 +361,80 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================================
              SECTORS
-        ========================================== -->
+        ====================================================== -->
 
-        <section class="section sectors" id="sectors">
+        <section class="section sectors-section" id="sectors">
 
-            <div class="section-label">
-                03 / SECTORS
-            </div>
+            <div class="container">
 
-            <div class="section-content">
+                <div class="eyebrow">
+                    Sectors
+                </div>
 
                 <h2>
                     Opportunities across
-                    <em>multiple sectors.</em>
+                    <span>high-value sectors.</span>
                 </h2>
+
 
                 <div class="sector-list">
 
                     <div class="sector-item">
                         <span>01</span>
-                        <strong>Industrial</strong>
-                        <span>↗</span>
+                        <strong>Industrial Development</strong>
+                        <p>
+                            Land and development opportunities
+                            for industrial expansion.
+                        </p>
                     </div>
 
                     <div class="sector-item">
                         <span>02</span>
-                        <strong>Residential &amp; Commercial</strong>
-                        <span>↗</span>
+                        <strong>Infrastructure</strong>
+                        <p>
+                            Strategic land and transaction
+                            support for infrastructure projects.
+                        </p>
                     </div>
 
                     <div class="sector-item">
                         <span>03</span>
-                        <strong>Infrastructure</strong>
-                        <span>↗</span>
+                        <strong>Residential & Commercial</strong>
+                        <p>
+                            Development opportunities with
+                            strong location and commercial
+                            fundamentals.
+                        </p>
                     </div>
 
                     <div class="sector-item">
                         <span>04</span>
                         <strong>Clean Energy</strong>
-                        <span>↗</span>
+                        <p>
+                            Land and transaction support for
+                            renewable and energy infrastructure.
+                        </p>
                     </div>
 
                     <div class="sector-item">
                         <span>05</span>
-                        <strong>Strategic Land</strong>
-                        <span>↗</span>
+                        <strong>Natural Assets & Afforestation</strong>
+                        <p>
+                            Strategic land identification and
+                            aggregation for environmental
+                            requirements.
+                        </p>
+                    </div>
+
+                    <div class="sector-item">
+                        <span>06</span>
+                        <strong>Strategic Investments</strong>
+                        <p>
+                            Connecting capital, land and
+                            development opportunities.
+                        </p>
                     </div>
 
                 </div>
@@ -394,151 +444,154 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================================
              APPROACH
-        ========================================== -->
+        ====================================================== -->
 
-        <section
-            class="section approach"
-            id="approach"
-        >
+        <section class="section approach-section" id="approach">
 
-            <div class="section-label">
-                04 / OUR APPROACH
-            </div>
+            <div class="container">
 
-            <div class="section-content">
-
-                <div class="approach-heading">
-
-                    <h2>
-                        Intelligence first.
-                        <br>
-                        <em>Execution always.</em>
-                    </h2>
-
-                </div>
-
-
-                <div class="approach-steps">
-
-                    <div class="approach-step">
-
-                        <span>01</span>
-
-                        <div>
-                            <h3>Identify</h3>
-
-                            <p>
-                                Understand the requirement,
-                                opportunity and underlying
-                                land or transaction.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="approach-step">
-
-                        <span>02</span>
-
-                        <div>
-                            <h3>Structure</h3>
-
-                            <p>
-                                Bring together the information,
-                                stakeholders and commercial
-                                structure required to proceed.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="approach-step">
-
-                        <span>03</span>
-
-                        <div>
-                            <h3>Facilitate</h3>
-
-                            <p>
-                                Coordinate the transaction and
-                                move the opportunity through
-                                the necessary stages.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="approach-step">
-
-                        <span>04</span>
-
-                        <div>
-                            <h3>Execute</h3>
-
-                            <p>
-                                Stay close to the transaction
-                                until the intended outcome
-                                is achieved.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             LEADERSHIP
-        ========================================== -->
-
-        <section
-            class="section leadership"
-            id="leadership"
-        >
-
-            <div class="section-label">
-                05 / LEADERSHIP
-            </div>
-
-            <div class="section-content">
-
-                <div class="leadership-grid">
+                <div class="approach-grid">
 
                     <div>
 
-                        <p class="eyebrow">
-                            AUREUM INDUSTRIES
-                        </p>
+                        <div class="eyebrow">
+                            Our Approach
+                        </div>
 
                         <h2>
-                            Built around
-                            <em>relationships.</em>
+                            Complexity,
+                            <span>made actionable.</span>
                         </h2>
 
                     </div>
 
-                    <div class="leadership-copy">
+                    <div class="approach-steps">
 
-                        <p>
-                            Aureum Industries brings together
-                            entrepreneurial thinking, strategic
-                            relationships and practical transaction
-                            experience.
+                        <div class="approach-step">
+
+                            <span>01</span>
+
+                            <div>
+                                <h3>Identify</h3>
+                                <p>
+                                    Understand the requirement,
+                                    opportunity and underlying
+                                    land or development potential.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-step">
+
+                            <span>02</span>
+
+                            <div>
+                                <h3>Evaluate</h3>
+                                <p>
+                                    Assess commercial,
+                                    legal, planning and
+                                    execution considerations.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-step">
+
+                            <span>03</span>
+
+                            <div>
+                                <h3>Structure</h3>
+                                <p>
+                                    Bring the right stakeholders,
+                                    commercial structure and
+                                    transaction pathway together.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-step">
+
+                            <span>04</span>
+
+                            <div>
+                                <h3>Execute</h3>
+                                <p>
+                                    Coordinate the transaction
+                                    towards a clear and executable
+                                    outcome.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LEADERSHIP
+        ====================================================== -->
+
+        <section
+            class="section leadership-section"
+            id="leadership"
+        >
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    Leadership
+                </div>
+
+                <div class="leadership-grid">
+
+                    <div class="leadership-image">
+                        <div class="image-placeholder">
+                            Leadership portrait
+                        </div>
+                    </div>
+
+                    <div class="leadership-content">
+
+                        <h2>
+                            Built around
+                            <span>relationships and execution.</span>
+                        </h2>
+
+                        <h3>
+                            Prasad A. Suryawanshi
+                        </h3>
+
+                        <p class="leadership-role">
+                            Founder & Director
                         </p>
 
                         <p>
-                            Our approach is built around long-term
-                            relationships and disciplined execution
-                            across complex opportunities.
+                            Aureum Industries was founded with
+                            a focus on creating a more connected
+                            approach to land, development and
+                            strategic transactions.
+                        </p>
+
+                        <p>
+                            The organisation brings together
+                            market intelligence, transaction
+                            experience and stakeholder
+                            relationships to help clients move
+                            from opportunity to outcome.
                         </p>
 
                     </div>
@@ -550,39 +603,38 @@
         </section>
 
 
-        <!-- =========================================
-             CONTACT
-        ========================================== -->
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
 
-        <section
-            class="contact-section"
-            id="contact"
-        >
+        <section class="cta-section" id="contact">
 
-            <div class="contact-inner">
+            <div class="container">
 
-                <p class="eyebrow">
-                    DISCUSS A PROJECT
-                </p>
+                <div class="cta-inner">
 
-                <h2>
-                    Have an opportunity
-                    <br>
-                    worth exploring?
-                </h2>
+                    <div class="eyebrow">
+                        Discuss a Project
+                    </div>
 
-                <p>
-                    Tell us what you are working on.
-                    Let's begin a conversation.
-                </p>
+                    <h2>
+                        Have an opportunity
+                        <span>worth exploring?</span>
+                    </h2>
 
-                <a
-                    href="mailto:info@aureumindustries.com"
-                    class="button button-light"
-                >
-                    Start a Conversation
-                    <span>↗</span>
-                </a>
+                    <p>
+                        Tell us what you are looking to acquire,
+                        develop, structure or unlock.
+                    </p>
+
+                    <a
+                        href="mailto:contact@aureumindustries.com"
+                        class="button button-dark"
+                    >
+                        Start a Conversation
+                    </a>
+
+                </div>
 
             </div>
 
@@ -591,32 +643,51 @@
     </main>
 
 
-    <!-- =========================================
+    <!-- =========================================================
          FOOTER
-    ========================================== -->
+    ========================================================== -->
 
     <footer class="site-footer">
 
-        <div class="footer-inner">
+        <div class="container">
 
-            <a
-                href="#home"
-                class="footer-brand"
-            >
-                <img
-                    src="image.png"
-                    alt="Aureum Industries"
+            <div class="footer-grid">
+
+                <a
+                    href="#home"
+                    class="footer-brand"
                 >
-            </a>
+                    <img
+                        src="image.png"
+                        alt="Aureum Industries"
+                    >
+                </a>
 
-            <p>
-                © <span id="year"></span>
-                Aureum Industries. All rights reserved.
-            </p>
+                <div class="footer-links">
 
-            <a href="#home">
-                Back to top ↑
-            </a>
+                    <a href="#about">About</a>
+                    <a href="#capabilities">Capabilities</a>
+                    <a href="#sectors">Sectors</a>
+                    <a href="#approach">Approach</a>
+                    <a href="#leadership">Leadership</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="year"></span> Aureum Industries.
+                    All rights reserved.
+                </span>
+
+                <a href="#top">
+                    Back to top ↑
+                </a>
+
+            </div>
 
         </div>
 
