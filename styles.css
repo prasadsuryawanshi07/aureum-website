@@ -1622,7 +1622,7 @@ body {
 }
 
 .site-header nav a:hover {
-    color: #b77b20;
+    color: #ffffff !important;
 }
 
 .site-header nav a:last-child {
@@ -1632,8 +1632,8 @@ body {
 }
 
 .site-header nav a:last-child:hover {
-    border-color: #b77b20;
-    color: #b77b20;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 
