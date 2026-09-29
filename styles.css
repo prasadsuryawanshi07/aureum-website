@@ -106,17 +106,18 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
 
     width: 100%;
     height: var(--header-height);
 
-    z-index: 1000;
+    z-index: 9999;
 
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(224, 214, 194, 0.98);
 
-    border-bottom: 1px solid rgba(31, 30, 27, 0.12);
+    border-bottom: 1px solid rgba(45, 40, 32, 0.16);
 
-    box-shadow: 0 2px 14px rgba(31, 30, 27, 0.04);
+    box-shadow: 0 2px 14px rgba(40, 35, 28, 0.06);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -135,7 +136,9 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-
+body {
+    padding-top: var(--header-height);
+}
 /* ============================================================
    BRAND / LOGO
    ============================================================ */
