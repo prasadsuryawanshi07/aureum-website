@@ -1575,7 +1575,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(32, 30, 27, 0.10);
-    background: #f8f5ee;
+   background: rgba(205, 192, 165, 0.98);
     position: relative;
     z-index: 1000;
 }
