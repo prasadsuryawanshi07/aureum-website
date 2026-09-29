@@ -147,15 +147,15 @@ body {
     display: flex;
     align-items: center;
 
-    width: 64px;
+    width: 80px;
     height: 64px;
 
     flex-shrink: 0;
 }
 
 .brand img {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
 
     object-fit: contain;
     object-position: center;
