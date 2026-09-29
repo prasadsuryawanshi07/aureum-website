@@ -137,7 +137,7 @@ a {
     justify-content: space-between;
 }
 body {
-    padding-top: var(--header-height);
+    padding-top: 0;
 }
 /* ============================================================
    BRAND / LOGO
