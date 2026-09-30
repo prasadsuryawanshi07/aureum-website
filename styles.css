@@ -2140,3 +2140,9 @@ body {
 
    background: #A99A7D !important;
 }
+.site-header nav a:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
