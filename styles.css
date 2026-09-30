@@ -2146,20 +2146,4 @@ body {
     border-bottom: none !important;
     box-shadow: none !important;
 }
-.site-header .desktop-nav a {
-    color: #26231f !important;
-    text-decoration: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    background-image: none !important;
-}
 
-.site-header .desktop-nav a:hover {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    background-image: none !important;
-}
