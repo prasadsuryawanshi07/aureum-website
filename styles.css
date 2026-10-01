@@ -2220,3 +2220,25 @@ body {
     color: #fffdf7;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
+/* =========================================================
+   AUREUM — HERO VIDEO / CAPABILITY LINE
+   ========================================================= */
+
+.hero-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 96px;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-visual video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
