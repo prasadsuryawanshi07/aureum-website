@@ -2233,3 +2233,12 @@ body {
     color: #b97812 !important;
     text-shadow: none !important;
 }
+/* =========================================================
+   AUREUM — HERO POSITION REFINEMENT
+   ========================================================= */
+
+.hero-content {
+    position: relative;
+    left: -45px;
+    top: 35px;
+}
