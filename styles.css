@@ -2210,26 +2210,26 @@ body {
 }
 
 /* =========================================================
-   AUREUM — HERO TYPOGRAPHY CLEANUP
+   AUREUM — HERO TYPOGRAPHY CONTRAST
    ========================================================= */
 
 .hero-content h1,
-.hero-content h1 span,
-.hero-description,
-.hero-content .eyebrow {
+.hero-content h1 span {
+    color: #26231f !important;
     text-shadow: none !important;
 }
 
 .hero-content h1 {
-    color: #ffffff !important;
     font-weight: 500;
 }
 
-.hero-content h1 span {
-    color: #ffffff !important;
+.hero-description {
+    color: #5f5a52 !important;
+    opacity: 1;
+    text-shadow: none !important;
 }
 
-.hero-description {
-    color: #ffffff !important;
-    opacity: 0.92;
+.hero-content .eyebrow {
+    color: #b97812 !important;
+    text-shadow: none !important;
 }
