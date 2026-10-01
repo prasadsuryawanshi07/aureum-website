@@ -2208,3 +2208,28 @@ body {
     border: none;
     outline: none;
 }
+
+/* =========================================================
+   AUREUM — HERO TYPOGRAPHY CLEANUP
+   ========================================================= */
+
+.hero-content h1,
+.hero-content h1 span,
+.hero-description,
+.hero-content .eyebrow {
+    text-shadow: none !important;
+}
+
+.hero-content h1 {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.hero-content h1 span {
+    color: #ffffff !important;
+}
+
+.hero-description {
+    color: #ffffff !important;
+    opacity: 0.92;
+}
