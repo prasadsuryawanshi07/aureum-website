@@ -1134,12 +1134,11 @@ body {
         transform 0.8s ease;
 }
 
-.reveal.visible {
+.reveal.is-visible {
     opacity: 1;
 
     transform: translateY(0);
 }
-
 
 /* ============================================================
    HERO VIDEO SUPPORT
