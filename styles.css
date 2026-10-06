@@ -2452,8 +2452,12 @@ body {
 }
 
 .capabilities-layout {
+    display: grid;
     grid-template-columns: 46.5vw 53.5vw;
+    gap: 0;
     width: 100vw;
+    min-height: 680px;
+    align-items: start;
 }
 
 .capabilities-content {
@@ -2463,21 +2467,15 @@ body {
 .capabilities-visual {
     width: 53.5vw;
     margin: 0;
+    align-self: start;
 }
 
 .capability-slide-stage {
+    position: relative;
     width: 53.5vw;
     height: 680px;
     min-height: 0;
-}
-
-.capabilities-layout {
-    min-height: 680px;
-    align-items: start;
-}
-
-.capabilities-visual {
-    align-self: start;
+    overflow: hidden;
 }
 
 .capability-slide img {
