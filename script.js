@@ -163,3 +163,93 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+/* =====================================================
+   CAPABILITIES SLIDER
+====================================================== */
+
+const capabilityNavItems = document.querySelectorAll(
+  ".capability-nav-item"
+);
+
+const capabilitySlides = document.querySelectorAll(
+  ".capability-slide"
+);
+
+const capabilityProgressFill = document.querySelector(
+  ".capability-progress-fill"
+);
+
+const capabilitySlideLabel = document.querySelector(
+  ".capability-slide-label"
+);
+
+if (
+  capabilityNavItems.length &&
+  capabilitySlides.length
+) {
+
+  function setCapabilitySlide(index) {
+
+    /* Navigation */
+
+    capabilityNavItems.forEach((item, i) => {
+      item.classList.toggle(
+        "is-active",
+        i === index
+      );
+    });
+
+
+    /* Visual slides */
+
+    capabilitySlides.forEach((slide, i) => {
+      slide.classList.toggle(
+        "is-active",
+        i === index
+      );
+    });
+
+
+    /* Slide number */
+
+    if (capabilitySlideLabel) {
+      capabilitySlideLabel.textContent =
+        `${String(index + 1).padStart(2, "0")} / 04`;
+    }
+
+
+    /* Progress */
+
+    if (capabilityProgressFill) {
+      const progress =
+        ((index + 1) / capabilitySlides.length) * 100;
+
+      capabilityProgressFill.style.width =
+        `${progress}%`;
+    }
+  }
+
+
+  /* Navigation click */
+
+  capabilityNavItems.forEach((item) => {
+
+    item.addEventListener("click", () => {
+
+      const index = Number(
+        item.dataset.slide
+      );
+
+      setCapabilitySlide(index);
+
+    });
+
+  });
+
+
+  /* Initialise */
+
+  setCapabilitySlide(0);
+
+}
