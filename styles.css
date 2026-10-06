@@ -2402,3 +2402,44 @@ body {
     object-fit: cover;
     object-position: center;
 }
+/* ============================================================
+   CAPABILITIES — FULL WIDTH SECTION
+   ============================================================ */
+
+.capabilities-section .container {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding-left: max(40px, calc((100vw - 1400px) / 2));
+    padding-right: 0;
+}
+
+.capabilities-layout {
+    grid-template-columns:
+        43.5%
+        56.5%;
+
+    gap: 0;
+
+    width: 100%;
+}
+
+.capabilities-visual {
+    width: 100%;
+    margin-right: 0;
+}
+
+.capability-slide-stage {
+    width: 100%;
+    height: 760px;
+}
+
+.capability-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
