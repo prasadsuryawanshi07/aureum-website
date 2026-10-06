@@ -2467,13 +2467,17 @@ body {
 
 .capability-slide-stage {
     width: 53.5vw;
-    height: 100%;
-    min-height: 680px;
+    height: 680px;
+    min-height: 0;
 }
 
 .capabilities-layout {
     min-height: 680px;
-    align-items: stretch;
+    align-items: start;
+}
+
+.capabilities-visual {
+    align-self: start;
 }
 
 .capability-slide img {
@@ -2482,7 +2486,6 @@ body {
     object-fit: cover;
     object-position: center;
 }
-
 /* =====================================================
    CAPABILITIES — SEGMENTED PROGRESS
 ====================================================== */
