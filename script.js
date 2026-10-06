@@ -189,9 +189,15 @@ if (
   capabilitySlides.length
 ) {
 
+  let currentCapability = 0;
+  let capabilityTimer = null;
+
+  const slideDuration = 6000;
+
+
   function setCapabilitySlide(index) {
 
-    /* Navigation */
+    currentCapability = index;
 
     capabilityNavItems.forEach((item, i) => {
       item.classList.toggle(
@@ -201,8 +207,6 @@ if (
     });
 
 
-    /* Visual slides */
-
     capabilitySlides.forEach((slide, i) => {
       slide.classList.toggle(
         "is-active",
@@ -211,27 +215,60 @@ if (
     });
 
 
-    /* Slide number */
-
     if (capabilitySlideLabel) {
       capabilitySlideLabel.textContent =
-        `${String(index + 1).padStart(2, "0")} / 04`;
+        `${String(index + 1).padStart(2, "0")} / ${String(
+          capabilitySlides.length
+        ).padStart(2, "0")}`;
     }
 
 
-    /* Progress */
-
     if (capabilityProgressFill) {
-      const progress =
-        ((index + 1) / capabilitySlides.length) * 100;
+      capabilityProgressFill.style.transition = "none";
+      capabilityProgressFill.style.width = "0%";
 
-      capabilityProgressFill.style.width =
-        `${progress}%`;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+
+          capabilityProgressFill.style.transition =
+            `width ${slideDuration}ms linear`;
+
+          capabilityProgressFill.style.width = "100%";
+
+        });
+      });
     }
   }
 
 
-  /* Navigation click */
+  function startCapabilityTimer() {
+
+    clearTimeout(capabilityTimer);
+
+    capabilityTimer = setTimeout(() => {
+
+      const nextCapability =
+        (currentCapability + 1) %
+        capabilitySlides.length;
+
+      setCapabilitySlide(nextCapability);
+
+      startCapabilityTimer();
+
+    }, slideDuration);
+  }
+
+
+  function selectCapability(index) {
+
+    clearTimeout(capabilityTimer);
+
+    setCapabilitySlide(index);
+
+    startCapabilityTimer();
+
+  }
+
 
   capabilityNavItems.forEach((item) => {
 
@@ -241,15 +278,16 @@ if (
         item.dataset.slide
       );
 
-      setCapabilitySlide(index);
+      selectCapability(index);
 
     });
 
   });
 
 
-  /* Initialise */
+  /* Start on the first capability */
 
   setCapabilitySlide(0);
+  startCapabilityTimer();
 
 }
