@@ -176,7 +176,11 @@ const capabilitySlides = document.querySelectorAll(
   ".capability-slide"
 );
 
-const capabilityProgressFill = document.querySelector(
+const capabilityProgressSegments = document.querySelectorAll(
+  ".capability-progress-segment"
+);
+
+const capabilityProgressFills = document.querySelectorAll(
   ".capability-progress-fill"
 );
 
@@ -186,7 +190,8 @@ const capabilitySlideLabel = document.querySelector(
 
 if (
   capabilityNavItems.length &&
-  capabilitySlides.length
+  capabilitySlides.length &&
+  capabilityProgressSegments.length
 ) {
 
   let currentCapability = 0;
@@ -199,45 +204,80 @@ if (
 
     currentCapability = index;
 
+
+    /* Navigation */
+
     capabilityNavItems.forEach((item, i) => {
+
       item.classList.toggle(
         "is-active",
         i === index
       );
+
     });
 
 
+    /* Visual slides */
+
     capabilitySlides.forEach((slide, i) => {
+
       slide.classList.toggle(
         "is-active",
         i === index
       );
+
     });
 
 
+    /* Slide number */
+
     if (capabilitySlideLabel) {
+
       capabilitySlideLabel.textContent =
         `${String(index + 1).padStart(2, "0")} / ${String(
           capabilitySlides.length
         ).padStart(2, "0")}`;
+
     }
 
 
-    if (capabilityProgressFill) {
-      capabilityProgressFill.style.transition = "none";
-      capabilityProgressFill.style.width = "0%";
+    /* Reset all progress segments */
+
+    capabilityProgressFills.forEach((fill, i) => {
+
+      fill.style.transition = "none";
+
+      if (i < index) {
+        fill.style.width = "100%";
+      } else {
+        fill.style.width = "0%";
+      }
+
+    });
+
+
+    /* Animate current segment */
+
+    const activeFill =
+      capabilityProgressFills[index];
+
+    if (activeFill) {
 
       requestAnimationFrame(() => {
+
         requestAnimationFrame(() => {
 
-          capabilityProgressFill.style.transition =
+          activeFill.style.transition =
             `width ${slideDuration}ms linear`;
 
-          capabilityProgressFill.style.width = "100%";
+          activeFill.style.width = "100%";
 
         });
+
       });
+
     }
+
   }
 
 
@@ -256,6 +296,7 @@ if (
       startCapabilityTimer();
 
     }, slideDuration);
+
   }
 
 
@@ -269,6 +310,8 @@ if (
 
   }
 
+
+  /* Manual navigation */
 
   capabilityNavItems.forEach((item) => {
 
@@ -285,9 +328,10 @@ if (
   });
 
 
-  /* Start on the first capability */
+  /* Start */
 
   setCapabilitySlide(0);
+
   startCapabilityTimer();
 
 }
