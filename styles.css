@@ -2480,3 +2480,46 @@ body {
     object-fit: cover;
     object-position: center;
 }
+
+/* =====================================================
+   CAPABILITIES — PROGRESS INDICATOR
+====================================================== */
+
+.capability-slider-footer {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 40px;
+}
+
+.capability-slide-label {
+    flex: 0 0 auto;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    white-space: nowrap;
+}
+
+.capability-progress {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    background: rgba(38, 35, 31, 0.22);
+    overflow: hidden;
+}
+
+.capability-progress-track {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.capability-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 25%;
+    background: var(--gold);
+    transition: width 0.7s ease;
+}
