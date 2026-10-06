@@ -2241,3 +2241,76 @@ body {
     left: -45px;
     top: 35px;
 }
+/* ============================================================
+   CAPABILITIES — MAIN LAYOUT
+   ============================================================ */
+
+.capabilities-section {
+    background: var(--cream);
+}
+
+.capabilities-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.85fr)
+        minmax(520px, 1.15fr);
+
+    gap: 80px;
+
+    align-items: center;
+
+    min-height: 760px;
+}
+
+.capabilities-content {
+    max-width: 620px;
+}
+
+.capabilities-content h2 {
+    margin: 20px 0 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(56px, 5.5vw, 88px);
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    color: var(--ink);
+}
+
+.capabilities-content h2 span {
+    color: var(--gold);
+}
+
+.capabilities-intro {
+    max-width: 520px;
+
+    margin: 0 0 55px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   CAPABILITIES — VISUAL AREA
+   ============================================================ */
+
+.capabilities-visual {
+    width: 100%;
+}
+
+.capability-slide-stage {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 680px;
+
+    overflow: hidden;
+}
