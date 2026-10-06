@@ -2482,7 +2482,7 @@ body {
 }
 
 /* =====================================================
-   CAPABILITIES — PROGRESS INDICATOR
+   CAPABILITIES — SEGMENTED PROGRESS
 ====================================================== */
 
 .capability-slider-footer {
@@ -2501,25 +2501,24 @@ body {
 }
 
 .capability-progress {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex: 1;
-    height: 1px;
+}
+
+.capability-progress-segment {
+    position: relative;
+    display: block;
+    flex: 1;
+    height: 2px;
     background: rgba(38, 35, 31, 0.22);
     overflow: hidden;
 }
 
-.capability-progress-track {
-    position: absolute;
-    inset: 0;
-    display: block;
-}
-
 .capability-progress-fill {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    width: 25%;
+    inset: 0;
+    width: 0%;
     background: var(--gold);
-    transition: width 0.7s ease;
 }
