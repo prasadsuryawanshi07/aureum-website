@@ -2355,7 +2355,7 @@ body {
 .capabilities-visual {
     position: relative;
     width: 53.5vw;
-    height: 720px;
+    height: auto;
     margin: 0;
     align-self: start;
 }
