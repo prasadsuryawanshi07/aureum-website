@@ -2348,6 +2348,7 @@ body {
     width: 100vw;
     min-height: 680px;
     align-items: start;
+    margin-top: -90px;
 }
 
 
