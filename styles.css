@@ -2371,9 +2371,10 @@ body {
 .capability-slide-stage {
     position: relative;
     width: 53.5vw;
-    height: 680px;
+    height: auto;
     min-height: 0;
     overflow: hidden;
+    aspect-ratio: 3 / 4;
 }
 
 .capability-slide img {
