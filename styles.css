@@ -2428,3 +2428,97 @@ body {
     border-radius: inherit;
     background: var(--gold);
 }
+/* ============================================================
+   CAPABILITIES — EDITORIAL NAVIGATION
+============================================================ */
+
+.capability-nav {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 560px);
+    margin-top: 42px;
+    border-top: 1px solid var(--line);
+}
+
+.capability-nav-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) 22px;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+    padding: 19px 4px;
+
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+
+    color: var(--muted);
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        padding 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.capability-nav-item:hover {
+    padding-left: 10px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.capability-nav-item.is-active {
+    color: var(--ink);
+}
+
+.capability-number {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.capability-title {
+    min-width: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.capability-arrow {
+    justify-self: end;
+    color: var(--gold);
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+.capability-nav-item:hover .capability-arrow,
+.capability-nav-item.is-active .capability-arrow {
+    transform: translate(3px, -2px);
+}
+
+.capability-nav-item:focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .capability-nav {
+        margin-top: 30px;
+    }
+
+    .capability-nav-item {
+        grid-template-columns: 30px minmax(0, 1fr) 20px;
+        gap: 8px;
+        padding: 16px 2px;
+    }
+
+    .capability-title {
+        font-size: 14px;
+    }
+}
