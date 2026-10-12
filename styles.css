@@ -2382,11 +2382,11 @@ body {
     justify-content: center;
     align-items: center;
 
+    width: 100%;
     padding: 0 16px;
     box-sizing: border-box;
     pointer-events: none;
 }
-
 .capability-slide-label {
     display: none;
 }
